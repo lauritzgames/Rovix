@@ -3,6 +3,6 @@ cd /d "C:\Users\lauri\Rovix"
 
 git add .
 git commit -m "Update"
-git push "."
+git push -u origin main
 
 pause
