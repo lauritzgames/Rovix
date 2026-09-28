@@ -7,3 +7,7 @@ py -m venv .venv
 python -m pip install -U pip
 
 pip install -r requirements.txt
+
+git remote add origin https://github.com/lauritzgames/Rovix.git
+git branch -M main
+git push -u origin main

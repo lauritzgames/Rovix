@@ -1,10 +1,10 @@
 @echo off
-cd /d "C:\Users\lauri\Rovix"
-pip freeze > requirements.txt
 
-git remote add origin https://github.com/lauritzgames/Rovix.git
-git branch -M main
-git push -u origin main
+cd /d "C:\Users\lauri\Rovix"
+
+call .venv\Scripts\Activate.bat
+
+pip freeze > requirements.txt
 
 git add .
 git commit -m "Update"
