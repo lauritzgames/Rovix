@@ -8,6 +8,7 @@ async def setup(client):
         name="deletecategory",
         description="Delete a category and all channels inside it"
     )
+    @app_commands.checks.has_permissions(administrator=True)
     @app_commands.describe(
         category="The category to delete"
     )

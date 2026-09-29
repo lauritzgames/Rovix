@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}Rovix Dashboard{% endblock %}</title>
+<link rel="preload" href="{{ url_for('static', filename='style.css') }}" as="style">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header><a href="/">Rovix</a>{% if user %}<span>{{ user.global_name or user.username }}</span><a href="/logout">Log out</a>{% endif %}</header>
+<main>{% block content %}{% endblock %}</main>
+</body>
+</html>
+

@@ -1,0 +1,63 @@
+{
+  "1554063064222015619": {
+    "automod": {
+      "words": [],
+      "links": true,
+      "spam": true,
+      "mentions": true,
+      "invites": true,
+      "caps": true,
+      "whitelist": [],
+      "max_mentions": 5,
+      "spam_window": 8,
+      "spam_limit": 6
+    },
+    "logging": {
+      "channel_id": 1554421189999464480,
+      "events": {
+        "messages": true,
+        "moderation": true,
+        "channels": true,
+        "roles": true,
+        "members": true,
+        "voice": true,
+        "server": true
+      }
+    },
+    "tickets": {
+      "category_id": 1554421139273420840,
+      "support_role_id": 1554410784094953524,
+      "logs_channel_id": null,
+      "panel_channel_id": null
+    },
+    "member": {
+      "welcome_channel_id": 1554389084925988887,
+      "welcome_message": "Welcome {member} to {server}!",
+      "goodbye_channel_id": null,
+      "goodbye_message": "{member} has left {server}.",
+      "autorole_id": null,
+      "verification_role_id": null,
+      "report_channel_id": null,
+      "feedback_channel_id": null,
+      "suggestion_channel_id": null
+    },
+    "reaction_roles": {},
+    "warnings": {}
+  },
+  "1552894506461036620": {
+    "automod": {
+      "links": true,
+      "invites": true,
+      "spam": true,
+      "mentions": true,
+      "caps": true
+    },
+    "tickets": {
+      "category_id": null,
+      "support_role_id": null
+    },
+    "logging": {
+      "channel_id": 1552894507710808065
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<a class="back" href="/">← Servers</a><div class="hero"><p>SERVER SETTINGS</p><h1>{{ guild.name }}</h1><span>These settings belong only to this server.</span></div>
+{% if request.args.get("saved") %}<div class="saved">Saved ✓</div>{% endif %}
+<form method="post">
+<section><h2>AutoMod</h2>
+<label><input type="checkbox" name="links" {% if config.get("automod",{}).get("links",true) %}checked{% endif %}> Block unapproved links</label>
+<label><input type="checkbox" name="invites" {% if config.get("automod",{}).get("invites",true) %}checked{% endif %}> Block Discord invites</label>
+<label><input type="checkbox" name="spam" {% if config.get("automod",{}).get("spam",true) %}checked{% endif %}> Detect spam</label>
+<label><input type="checkbox" name="mentions" {% if config.get("automod",{}).get("mentions",true) %}checked{% endif %}> Detect mention spam</label>
+<label><input type="checkbox" name="caps" {% if config.get("automod",{}).get("caps",true) %}checked{% endif %}> Detect excessive caps</label></section>
+<section><h2>Tickets</h2><label>Ticket category<select name="category_id"><option value="">Not configured</option>{% for c in channels if c.type == 4 %}<option value="{{ c.id }}" {% if config.get("tickets",{}).get("category_id")|string == c.id|string %}selected{% endif %}>{{ c.name }}</option>{% endfor %}</select></label>
+<label>Support role<select name="support_role_id"><option value="">Not configured</option>{% for r in roles if not r.managed %}<option value="{{ r.id }}" {% if config.get("tickets",{}).get("support_role_id")|string == r.id|string %}selected{% endif %}>@{{ r.name }}</option>{% endfor %}</select></label></section>
+<section><h2>Logging</h2><label>Log channel<select name="logging_channel_id"><option value="">Disabled</option>{% for c in channels if c.type == 0 %}<option value="{{ c.id }}" {% if config.get("logging",{}).get("channel_id")|string == c.id|string %}selected{% endif %}>#{{ c.name }}</option>{% endfor %}</select></label></section>
+<button class="button primary" type="submit">Save changes</button></form>
+{% endblock %}
+

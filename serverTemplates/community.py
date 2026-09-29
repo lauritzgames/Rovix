@@ -1,433 +1,78 @@
 TEMPLATE = {
-
     "name": "Community",
-
-    "categories": [
-
-        {
-            "name": "❗IMPORTANT❗",
-            "channels": [
-
-                {
-                    "id": "welcome",
-                    "name": "👋welcome",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [
-                        "👋 Welcome to the server!",
-                        "Please read <#-(:rules:)-> before chatting."
-                    ],
-                },
-
-                {
-                    "id": "rules",
-                    "name": "📜rules",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [
-                        "📜 Server Rules\n\n"
-                        "1. Be respectful.\n"
-                        "2. No spam.\n"
-                        "3. No harassment.\n"
-                        "4. Keep content appropriate.\n"
-                        "5. Follow Discord's Terms of Service.\n"
-                        "6. Follow staff instructions."
-                    ],
-                },
-
-                {
-                    "id": "announcements",
-                    "name": "📣announcements",
-                    "type": "text",
-                    "permissions": {
-                        "public": {
-                            "send_messages": False,
-                            "view_channel": True,
-                        },
-                        "staff": {
-                            "send_messages": True,
-                            "view_channel": True,
-                        },
-                    },
-                    "messages": [
-                        "📣 Welcome to the announcements channel!"
-                    ],
-                },
-
-                {
-                    "id": "server-info",
-                    "name": "📖server-info",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [
-                        "📖 Server Information\n\n"
-                        "Welcome to our community!"
-                    ],
-                },
-
-                {
-                    "id": "updates",
-                    "name": "📰updates",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-            ],
-        },
-
-        {
-            "name": "💬 COMMUNITY 💬",
-            "channels": [
-
-                {
-                    "id": "general",
-                    "name": "💬general",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "introductions",
-                    "name": "👋introductions",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [
-                        "👋 Introduce yourself to the community!"
-                    ],
-                },
-
-                {
-                    "id": "random",
-                    "name": "💭random",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "memes",
-                    "name": "😂memes",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "suggestions",
-                    "name": "💡suggestions",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "polls",
-                    "name": "📊polls",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-            ],
-        },
-
-        {
-            "name": "📸 MEDIA 📸",
-            "channels": [
-
-                {
-                    "id": "media",
-                    "name": "📷media",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "art",
-                    "name": "🎨art",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "videos",
-                    "name": "🎬videos",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "screenshots",
-                    "name": "📸screenshots",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "music",
-                    "name": "🎵music",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-            ],
-        },
-
-        {
-            "name": "🎮 GAMING 🎮",
-            "channels": [
-
-                {
-                    "id": "gaming",
-                    "name": "🎮gaming",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "game-chat",
-                    "name": "🕹️game-chat",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "achievements",
-                    "name": "🏆achievements",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "looking-for-group",
-                    "name": "🔎looking-for-group",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "gaming-events",
-                    "name": "📅gaming-events",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-            ],
-        },
-
-        {
-            "name": "🤖 BOTS 🤖",
-            "channels": [
-
-                {
-                    "id": "bot-commands",
-                    "name": "🤖bot-commands",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [
-                        "🤖 Use bot commands in this channel."
-                    ],
-                },
-
-                {
-                    "id": "bot-games",
-                    "name": "🎰bot-games",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "bot-stats",
-                    "name": "📊bot-stats",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-            ],
-        },
-
-        {
-            "name": "🎉 EVENTS 🎉",
-            "channels": [
-
-                {
-                    "id": "events",
-                    "name": "📅events",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "competitions",
-                    "name": "🏆competitions",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "giveaways",
-                    "name": "🎁giveaways",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "event-chat",
-                    "name": "🗓️event-chat",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-            ],
-        },
-
-        {
-            "name": "🆘 SUPPORT 🆘",
-            "channels": [
-
-                {
-                    "id": "help",
-                    "name": "❓help",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "bug-reports",
-                    "name": "🐛bug-reports",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "feature-requests",
-                    "name": "💡feature-requests",
-                    "type": "text",
-                    "permissions": "public",
-                    "messages": [],
-                },
-
-                {
-                    "id": "tickets",
-                    "name": "🎫tickets",
-                    "type": "text",
-                    "permissions": "private",
-                    "messages": [
-                        "🎫 Create a ticket if you need help."
-                    ],
-                },
-
-            ],
-        },
-
-        {
-            "name": "🔊 VOICE 🔊",
-            "channels": [
-
-                {
-                    "id": "general-voice",
-                    "name": "🔊General",
-                    "type": "voice",
-                    "permissions": "public",
-                },
-
-                {
-                    "id": "gaming-1",
-                    "name": "🔊Gaming 1",
-                    "type": "voice",
-                    "permissions": "public",
-                },
-
-                {
-                    "id": "gaming-2",
-                    "name": "🔊Gaming 2",
-                    "type": "voice",
-                    "permissions": "public",
-                },
-
-                {
-                    "id": "chill",
-                    "name": "🔊Chill",
-                    "type": "voice",
-                    "permissions": "public",
-                },
-
-                {
-                    "id": "music-voice",
-                    "name": "🔊Music",
-                    "type": "voice",
-                    "permissions": "public",
-                },
-
-                {
-                    "id": "event-vc",
-                    "name": "🔊Event VC",
-                    "type": "voice",
-                    "permissions": "public",
-                },
-
-            ],
-        },
-
-        {
-            "name": "🔒 STAFF 🔒",
-            "channels": [
-
-                {
-                    "id": "staff-chat",
-                    "name": "💬staff-chat",
-                    "type": "text",
-                    "permissions": "private",
-                    "messages": [],
-                },
-
-                {
-                    "id": "staff-info",
-                    "name": "📋staff-info",
-                    "type": "text",
-                    "permissions": "private",
-                    "messages": [],
-                },
-
-                {
-                    "id": "mod-logs",
-                    "name": "📜mod-logs",
-                    "type": "text",
-                    "permissions": "private",
-                    "messages": [],
-                },
-
-                {
-                    "id": "reports",
-                    "name": "⚠️reports",
-                    "type": "text",
-                    "permissions": "private",
-                    "messages": [],
-                },
-
-            ],
-        },
-
+    "roles": [
+        {"id": "staff", "name": "Staff", "color": 3447003, "permissions": ["manage_messages", "manage_channels"], "mentionable": True},
+        {"id": "support", "name": "Support", "color": 3066993, "mentionable": True},
+        {"id": "event-team", "name": "Event Team", "color": 15105570, "mentionable": True},
+        {"id": "moderator", "name": "Moderator", "color": 15158332, "permissions": ["manage_messages"], "mentionable": True},
     ],
-
+    "categories": [
+        {"id": "important", "name": "❗ IMPORTANT ❗", "channels": [
+            {"id": "welcome", "name": "👋welcome", "type": "text", "topic": "Welcome and server information.", "messages": ["👋 Welcome to the community! Please read <#-(:rules:)-> before chatting.", "Need help? Open a ticket in -(;tickets;)-."]},
+            {"id": "rules", "name": "📜rules", "type": "text", "messages": ["📜 Server Rules\n\n1. Be respectful.\n2. No spam.\n3. No harassment.\n4. Keep content appropriate.\n5. Follow Discord's Terms of Service.\n6. Follow staff instructions."]},
+            {"id": "announcements", "name": "📣announcements", "type": "text", "permissions": {"public": {"send_messages": False, "view_channel": True}, "staff": {"send_messages": True, "view_channel": True}}, "messages": ["📣 Welcome to the announcements channel!"]},
+            {"id": "server-info", "name": "📖server-info", "type": "text", "messages": ["📖 Server Information\n\nWelcome to our community!"]},
+            {"id": "updates", "name": "📰updates", "type": "text", "messages": ["📰 Server updates will be posted here."]},
+            {"id": "faq", "name": "❓faq", "type": "text", "messages": ["❓ Check the FAQ before opening a support ticket."]},
+        ]},
+        {"id": "community", "name": "💬 COMMUNITY 💬", "channels": [
+            {"id": "general", "name": "💬general", "type": "text", "slowmode_delay": 2, "messages": ["💬 Welcome to general chat!"]},
+            {"id": "introductions", "name": "👋introductions", "type": "text", "messages": ["👋 Introduce yourself to the community!"]},
+            {"id": "random", "name": "💭random", "type": "text", "messages": ["💭 Anything that follows the server rules can go here."]},
+            {"id": "memes", "name": "😂memes", "type": "text", "messages": ["😂 Share your memes here."]},
+            {"id": "off-topic", "name": "🗯️off-topic", "type": "text", "slowmode_delay": 2, "messages": []},
+            {"id": "suggestions", "name": "💡suggestions", "type": "forum", "messages": ["💡 Create a suggestion and explain why it would help the community."]},
+            {"id": "polls", "name": "📊polls", "type": "text", "permissions": {"public": {"send_messages": False, "view_channel": True}, "staff": {"send_messages": True, "view_channel": True}}, "messages": ["📊 Community polls appear here."]},
+        ]},
+        {"id": "media", "name": "📸 MEDIA 📸", "channels": [
+            {"id": "media", "name": "📷media", "type": "text", "messages": ["📷 Share photos and other community media."]},
+            {"id": "art", "name": "🎨art", "type": "text", "messages": ["🎨 Show your artwork."]},
+            {"id": "videos", "name": "🎬videos", "type": "text", "messages": ["🎬 Share videos and clips."]},
+            {"id": "screenshots", "name": "📸screenshots", "type": "text", "messages": ["📸 Share screenshots."]},
+            {"id": "music", "name": "🎵music", "type": "text", "messages": ["🎵 Talk about music and share recommendations."]},
+            {"id": "media-forum", "name": "🖼️media-discussion", "type": "forum", "messages": ["Create a discussion around a piece of media."]},
+        ]},
+        {"id": "gaming", "name": "🎮 GAMING 🎮", "channels": [
+            {"id": "gaming", "name": "🎮gaming", "type": "text", "messages": ["🎮 Talk about games here."]},
+            {"id": "game-chat", "name": "🕹️game-chat", "type": "text", "messages": ["🕹️ Discuss games and gaming news."]},
+            {"id": "achievements", "name": "🏆achievements", "type": "text", "messages": ["🏆 Share your achievements."]},
+            {"id": "looking-for-group", "name": "🔎looking-for-group", "type": "text", "slowmode_delay": 3, "messages": ["🔎 Find people to play with."]},
+            {"id": "gaming-events", "name": "📅gaming-events", "type": "text", "messages": ["📅 Gaming events are posted here."]},
+            {"id": "game-forum", "name": "🕹️game-discussions", "type": "forum", "messages": ["Start a discussion about a game."]},
+        ]},
+        {"id": "bots", "name": "🤖 BOTS 🤖", "channels": [
+            {"id": "bot-commands", "name": "🤖bot-commands", "type": "text", "messages": ["🤖 Use bot commands in this channel."]},
+            {"id": "bot-games", "name": "🎰bot-games", "type": "text", "messages": ["🎰 Bot games can be used here."]},
+            {"id": "bot-stats", "name": "📊bot-stats", "type": "text", "messages": ["📊 Bot statistics and information."]},
+        ]},
+        {"id": "events", "name": "🎉 EVENTS 🎉", "channels": [
+            {"id": "events", "name": "📅events", "type": "text", "permissions": {"public": {"send_messages": False, "view_channel": True}, "event-team": {"send_messages": True, "view_channel": True}}, "messages": ["🎉 Community events are posted here."]},
+            {"id": "competitions", "name": "🏆competitions", "type": "forum", "messages": ["Create a competition post."]},
+            {"id": "giveaways", "name": "🎁giveaways", "type": "text", "permissions": {"public": {"send_messages": False, "view_channel": True}, "event-team": {"send_messages": True, "view_channel": True}}, "messages": ["🎁 Official giveaways are posted here."]},
+            {"id": "event-chat", "name": "🗓️event-chat", "type": "text", "messages": ["🗓️ Discuss upcoming events."]},
+            {"id": "event-stage", "name": "🎙️live-events", "type": "stage"},
+            {"id": "event-vc", "name": "🔊Event VC", "type": "voice", "user_limit": 25, "bitrate": 96000, "rtc_region": "europe"},
+        ]},
+        {"id": "tickets", "name": "🆘 SUPPORT 🆘", "channels": [
+            {"id": "help", "name": "❓help", "type": "text", "slowmode_delay": 5, "messages": ["❓ Ask general community questions here."]},
+            {"id": "bug-reports", "name": "🐛bug-reports", "type": "forum", "messages": ["🐛 Create a detailed bug report."]},
+            {"id": "feature-requests", "name": "💡feature-requests", "type": "forum", "messages": ["💡 Suggest a feature for the server."]},
+            {"id": "ticket-panel", "name": "🎫tickets", "type": "text", "permissions": {"public": {"view_channel": True, "send_messages": False}, "support": {"view_channel": True, "send_messages": True}}, "messages": ["🎫 Need private help? The ticket panel will be below. -(^support^)- can help you."], "commands": ["ticket setup -(;tickets;)- -(^support^)-", "ticket panel"]},
+        ]},
+        {"id": "voice", "name": "🔊 VOICE 🔊", "channels": [
+            {"id": "general-voice", "name": "🔊General", "type": "voice", "user_limit": 25, "bitrate": 96000, "rtc_region": "europe"},
+            {"id": "gaming-1", "name": "🔊Gaming 1", "type": "voice", "user_limit": 10, "bitrate": 96000, "rtc_region": "europe"},
+            {"id": "gaming-2", "name": "🔊Gaming 2", "type": "voice", "user_limit": 10, "bitrate": 96000, "rtc_region": "europe"},
+            {"id": "chill", "name": "🔊Chill", "type": "voice", "user_limit": 10, "bitrate": 64000, "rtc_region": "europe"},
+            {"id": "music-voice", "name": "🔊Music", "type": "voice", "user_limit": 10, "bitrate": 64000, "rtc_region": "europe"},
+            {"id": "stage", "name": "🎙️Community Stage", "type": "stage"},
+        ]},
+        {"id": "staff", "name": "🔒 STAFF 🔒", "permissions": {"public": {"view_channel": False}, "staff": {"view_channel": True}, "moderator": {"view_channel": True}}, "channels": [
+            {"id": "staff-chat", "name": "💬staff-chat", "type": "text", "permissions": "private", "messages": ["🔒 Staff discussion."]},
+            {"id": "staff-info", "name": "📋staff-info", "type": "text", "permissions": "private", "messages": ["📋 Staff information."]},
+            {"id": "mod-logs", "name": "📜mod-logs", "type": "text", "permissions": "private"},
+            {"id": "reports", "name": "⚠️reports", "type": "text", "permissions": "private", "messages": ["⚠️ Moderation reports."]},
+            {"id": "staff-voice", "name": "🔊Staff VC", "type": "voice", "permissions": "private", "user_limit": 15, "bitrate": 64000, "rtc_region": "europe"},
+        ]},
+    ],
 }

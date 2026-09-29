@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="hero"><p>ROVIX DASHBOARD</p><h1>Your servers</h1><span>Only servers where you have Administrator permission are shown.</span></div>
+<div class="grid">
+{% for guild in guilds %}
+<article>
+<div class="server"><div class="icon">{% if guild.icon %}<img src="https://cdn.discordapp.com/icons/{{ guild.id }}/{{ guild.icon }}.png?size=128">{% else %}{{ guild.name[:1]|upper }}{% endif %}</div><div><h2>{{ guild.name }}</h2><small>{{ guild.id }}</small></div></div>
+{% if guild.installed %}<b class="green">● Rovix installed</b><a class="button primary" href="/server/{{ guild.id }}">Configure</a>
+{% else %}<b class="muted">● Rovix not installed</b><a class="button" target="_blank" href="https://discord.com/oauth2/authorize?client_id={{ client_id }}&scope=bot%20applications.commands&permissions={{ permissions }}&guild_id={{ guild.id }}&disable_guild_select=true">Invite Rovix</a>{% endif %}
+</article>
+{% else %}<div class="empty"><h2>No servers found</h2><span>Administrator permission is required.</span></div>{% endfor %}
+</div>
+{% endblock %}
+

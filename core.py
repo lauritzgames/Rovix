@@ -27,7 +27,8 @@ def utcnow():
 def normalize_text(value):
     value = unicodedata.normalize("NFKD", value)
     value = "".join(char for char in value if not unicodedata.combining(char))
-    return value.casefold().translate(SUBSTITUTIONS)
+    value = value.casefold().translate(SUBSTITUTIONS)
+    return re.sub(r"[^a-z0-9]+", "", value)
 
 def normalize_name(value):
     return re.sub(r"[^a-z0-9]+", "", normalize_text(value))

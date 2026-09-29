@@ -43,7 +43,7 @@ class ServerPanelSelect(discord.ui.Select):
             ),
             "utilities": (
                 "📊 Server Utilities",
-                "/poll\n/embed\n/announce\n/say\n/remind\n/timer\n/giveaway\n/reactionrole\n/suggest\n/afk\n/8ball\n/choose"
+                "/poll\n/embed\n/announce\n/say\n/remind\n/timer\n/reactionrole\n/suggest\n/afk\n/8ball\n/choose"
             ),
             "advanced": (
                 "🧠 Advanced Rovix",
